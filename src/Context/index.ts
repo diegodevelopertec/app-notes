@@ -26,7 +26,7 @@ export type ContextType={
 
     notes:NoteType[] | null,
     addNote:(data:NoteType)=>void,
-    deleteNote:(id:string)=>void,
+    deleteNote:(data:NoteType)=>void,
     updateNote:(data:NoteType)=>void
 }
 
@@ -35,14 +35,13 @@ export const ContextApp=createContext<ContextType>({
     stateModal:false,
     setStateModal:()=>{},
     users:null,
-    Login:(data:UserType)=>{},
-    Register:(data:UserType)=>{},
+    Login:()=>{},
+    Register:()=>{},
 
     notes:[],
-    addNote:(data:NoteType)=>{},
-    deleteNote:(id:string)=>{},
-    updateNote:(data:NoteType)=>{}
-
+    addNote:()=>{},
+    deleteNote:()=>{},
+    updateNote:()=>{}
 
 })
 

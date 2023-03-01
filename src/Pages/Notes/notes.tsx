@@ -16,13 +16,17 @@ export const NotesPage=()=>{
             <Title >Suas Anotações</Title>
             <Container  p="10px" d="flex" flexWrap="wrap" mqp="5px" >
                 {
-                    notes?.map((item,index)=>(
-                    
+                    notes!.length > 0 ? 
+                        notes?.map((item,index)=>(
                         <CardNote data={item} key={index} />
-                    
-                    ))
+                        ))
+                     :
+                    <Container d="flex" flexJustify="center">
+                        <Title fontSize="24px">Nenhuma Anotação ainda</Title>
+                    </Container>
+
                 }
-                  <Buttom onClick={()=>setStateModal(true)} ps="fixed" h="60px" w="60px" fontSize="25px" cursor="pointer" color="white" bg="green" bd="none" bdRadius="100%" psRight="12px"> + </Buttom>
+                  <Buttom bgHover="#1cab21" onClick={()=>setStateModal(true)} ps="fixed" h="60px" w="60px" fontSize="25px" cursor="pointer" color="white" bg="green" bd="none" bdRadius="100%" psRight="12px"> + </Buttom>
                   <Modal bg="rgba(220, 210, 215, 0.26)" h="100%" >< FormNote /></Modal>
             </Container>
           

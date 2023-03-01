@@ -94,7 +94,7 @@ export const TextArea=({...propsElement}:PropsComponents)=>{
     mqDAlign={propsElement.mqDAlign}
     mqDJustify={propsElement.mqDJustify}
     mqDirection={propsElement.mqDirection}
-    
+    fontFamilly={propsElement.fontFamilly}
 
     mqMnh={propsElement.mqmnh}
     mqMnw={propsElement.mqmnw}

@@ -1,10 +1,12 @@
 import { Container } from "../../structure/Container/Index"
 import {PropsComponents} from '../../../../Types/PropsComponents'
-import { ThemeStyle } from "../../../ThemeStyle"
+
 
 export const Card=({...PropsComponents}:PropsComponents)=>{
     return <Container
         {...PropsComponents}
+        fontSize={PropsComponents.fontSize}
+        fontFamilly={PropsComponents.fontFamilly}
      >
         {PropsComponents.children}
     </Container>

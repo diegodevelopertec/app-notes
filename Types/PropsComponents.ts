@@ -5,7 +5,7 @@ import { ReactNode } from "react"
 export type PropsComponents={
   
         //formularios
-        type?:string
+        type?: string
         disabled?:boolean,
         required?:boolean,
         resize?:string,

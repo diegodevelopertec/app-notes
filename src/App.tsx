@@ -23,7 +23,6 @@ const App=()=>{
               <Route path='/register' element={<NotesPage />} />
             </Routes>
           </BrowserRouter>
-     
       </Container>
       
       <Container bg='#322d33' nameComponent='footer' h='120px'  d='flex' flexJustify='center' flexAlign='center'>

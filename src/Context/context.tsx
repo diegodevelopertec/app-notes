@@ -1,5 +1,5 @@
 import { ContextApp } from "."
-import { ReactNode,useState } from "react"
+import { ReactNode,useEffect,useState } from "react"
 import { UserType } from "./index"
 import { NoteType } from "."
 import {v4 as uuid} from 'uuid'
@@ -12,32 +12,34 @@ type Props={
 
 export const ContextProvider=({children}:Props)=>{
     const [users,setUser]=useState<UserType | null>(null!)
-    const [notes,setNotes]=useState<NoteType[] | []>(dataNote)
+    const [notes,setNotes]=useState<NoteType[] | []>([])
     const [token,setToken]=useState<String | null>(null)
     const [stateModal,setStateModal]=useState<boolean>(false)
 
-   const  Login=(data:UserType)=>{
+
+ 
+    const  Login=(data:UserType)=>{
     
     
-
-
-   }
+    
+    
+    }
+   
     const Register=(data:UserType)=>{
-        let newUser={id:uuid(),...data }
-        setUser(newUser)
-        localStorage.setItem('user',JSON.stringify(newUser))
+       
+        setUser(data)
+        localStorage.setItem('user',JSON.stringify(data))
 
     }
 
 
     const addNote=(data:NoteType)=>{
         setNotes([data,...notes])
-
-
     }
-    const deleteNote=(id:string)=>{
-        let listNotesUpdate=notes.filter(item=>item.id !== id)
+    const deleteNote=(data:NoteType)=>{
+        let listNotesUpdate=notes.filter(item=>item.id !== data.id)
         setNotes([...listNotesUpdate])
+        
 
     }
     const updateNote=(data:NoteType)=>{

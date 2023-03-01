@@ -93,7 +93,7 @@ export const Input=({...propsElement}:PropsComponents)=>{
     mqDAlign={propsElement.mqDAlign}
     mqDJustify={propsElement.mqDJustify}
     mqDirection={propsElement.mqDirection}
-    
+    type={propsElement.type}
 
     mqMnh={propsElement.mqmnh}
     mqMnw={propsElement.mqmnw}
