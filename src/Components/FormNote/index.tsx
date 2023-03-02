@@ -56,7 +56,6 @@ export const FormNote=()=>{
 const setData=()=>{
   if(titleForm && contentForm){
                addNote({id:uuid(),title:titleForm,content:contentForm})
-               toast.success('Anotação criada')
                setStateModal(false)
                setTitleForm('')
                setContentForm('')

@@ -26,7 +26,7 @@ export const NotesPage=()=>{
                     </Container>
 
                 }
-                  <Buttom bgHover="#1cab21" onClick={()=>setStateModal(true)} ps="fixed" h="60px" w="60px" fontSize="25px" cursor="pointer" color="white" bg="green" bd="none" bdRadius="100%" psRight="12px"> + </Buttom>
+                  <Buttom bgHover="#0f4a89" onClick={()=>setStateModal(true)} ps="fixed" h="60px" w="60px" fontSize="45px" cursor="pointer" color="#31b845" bg="#07223d" bd="none" bdRadius="100%" psRight="12px"> + </Buttom>
                   <Modal bg="rgba(220, 210, 215, 0.26)" h="100%" >< FormNote /></Modal>
             </Container>
           

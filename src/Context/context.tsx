@@ -4,6 +4,8 @@ import { UserType } from "./index"
 import { NoteType } from "."
 import {v4 as uuid} from 'uuid'
 import { dataNote } from "../data"
+import { toast } from "react-toastify"
+
 
 type Props={
     children:ReactNode
@@ -17,7 +19,6 @@ export const ContextProvider=({children}:Props)=>{
     const [stateModal,setStateModal]=useState<boolean>(false)
 
 
- 
     const  Login=(data:UserType)=>{
     
     
@@ -35,10 +36,13 @@ export const ContextProvider=({children}:Props)=>{
 
     const addNote=(data:NoteType)=>{
         setNotes([data,...notes])
+        toast.success('Anotação criada')
     }
-    const deleteNote=(data:NoteType)=>{
-        let listNotesUpdate=notes.filter(item=>item.id !== data.id)
-        setNotes([...listNotesUpdate])
+
+    const deleteNote=(id:string)=>{
+       
+        setNotes(notes.filter(item=>item.id !== id))
+        toast.success('Anotação deletada')
         
 
     }
@@ -46,7 +50,7 @@ export const ContextProvider=({children}:Props)=>{
         let dataId=notes.find(item=>item.id === data.id)
         dataId!.content=data.content
         dataId!.title=data.title
-
+        toast.success('Anotação atualizada')
     }
 
 

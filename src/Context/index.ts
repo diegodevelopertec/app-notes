@@ -26,7 +26,7 @@ export type ContextType={
 
     notes:NoteType[] | null,
     addNote:(data:NoteType)=>void,
-    deleteNote:(data:NoteType)=>void,
+    deleteNote:(id:string)=>void,
     updateNote:(data:NoteType)=>void
 }
 
