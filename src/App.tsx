@@ -7,12 +7,10 @@ import { NotesPage } from './Pages/Notes/notes'
 import { LoginPage } from './Pages/Login'
 import { RegisterPage } from './Pages/Register'
 import { ToastContainer, toast } from 'react-toastify';
-import { Modal } from './Components/Modal'
 import { Image } from './Components/structure/Image'
 import 'react-toastify/dist/ReactToastify.css'
 import GitIcon from '/git.png'
 import LinkeIcon from '/linkedin.png'
-import { Link } from 'react-router-dom'
 import { Text } from './Components/structure/Text'
 
 
