@@ -2,6 +2,7 @@
 import* as S from './style'
 import { PropsComponents } from '../../../../Types/PropsComponents'
 
+
 type Props={
      type:string,
     bg?:string,
@@ -30,14 +31,13 @@ export const TextArea=({...propsElement}:PropsComponents)=>{
     minLength={propsElement.minLenght}
     required={propsElement.required}
     disabled={propsElement.disabled}
-    defaultValue={propsElement.defaultValue}
     bgHover={propsElement.bgHover}
     colorHover={propsElement.colorHover}
     pHover={propsElement.pHover}
     mHover={propsElement.mHover}
     opacityHover={propsElement.opacityHover}
     w={propsElement.w}
-    
+    value={propsElement.value}
     d={propsElement.d}
     flexJustify={propsElement.flexJustify}
     flexAlign={propsElement.flexAlign}

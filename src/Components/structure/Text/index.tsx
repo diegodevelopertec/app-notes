@@ -14,7 +14,6 @@ export const Text=({...propsElement}:PropsComponents)=>{
     opacityHover={propsElement.opacityHover}
     w={propsElement.w}
     trs={propsElement.trs}
-   
     d={propsElement.d}
     flexJustify={propsElement.flexJustify}
     flexAlign={propsElement.flexAlign}

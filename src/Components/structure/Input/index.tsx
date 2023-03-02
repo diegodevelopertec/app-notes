@@ -25,12 +25,12 @@ type Props={
 export const Input=({...propsElement}:PropsComponents)=>{
     return <S.Box
      
+    cursor={propsElement.cursor}
     onChange={propsElement.onChange}
     outline={propsElement.outline}
     outlineFocus={propsElement.outlineFocus}
     required={propsElement.required}
     disabled={propsElement.disabled}
-    defaultValue={propsElement.defaultValue}
     bgHover={propsElement.bgHover}
     colorHover={propsElement.colorHover}
     pHover={propsElement.pHover}
@@ -43,7 +43,7 @@ export const Input=({...propsElement}:PropsComponents)=>{
     flexAlign={propsElement.flexAlign}
     flexDirection={propsElement.flexDirection}
     placeholder={propsElement.placeholder}
-
+    value={propsElement.value}
     h={propsElement.h}
     m={propsElement.m}
     mt={propsElement.mt}
