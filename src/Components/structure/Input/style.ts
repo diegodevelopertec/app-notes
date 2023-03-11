@@ -160,8 +160,8 @@ max-height: ${PropsStyle=>PropsStyle.maxW};
     cursor: ${PropsStyle=>PropsStyle.cursor};
 }
 
-:focus{
- outline: ${PropsStyle=>PropsStyle.outlineFocus};
+ &:focus{
+  outline: ${PropsStyle=>PropsStyle.outlineFocus};
 }
 
 

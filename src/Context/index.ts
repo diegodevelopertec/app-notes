@@ -1,15 +1,19 @@
 import { createContext,useContext } from "react"
 
+
+
+
+
+
 export type NoteType={
     id:string,
     title:string,
     content:string,
-   
+  
 }
 
 export type UserType={
-    id?:string,
-    name?:string,
+    name:string,
     email:string,
     password:string
 }
@@ -19,11 +23,12 @@ export type UserType={
 
 export type ContextType={
     stateModal:boolean,
+    token:string | null,
     setStateModal:(state:boolean)=>void,
-    users:UserType | null,
+    user:UserType | null ,
     Login:(data:UserType)=>boolean | void,
     Register:(data:UserType)=>any,
-
+    Logout:()=>void,
     notes:NoteType[] | null,
     addNote:(data:NoteType)=>void,
     deleteNote:(id:string)=>void,
@@ -33,10 +38,12 @@ export type ContextType={
 export const ContextApp=createContext<ContextType>({
   
     stateModal:false,
+    token:null,
     setStateModal:()=>{},
-    users:null,
+    user:null,
     Login:()=>{},
     Register:()=>{},
+    Logout:()=>{},
 
     notes:[],
     addNote:()=>{},

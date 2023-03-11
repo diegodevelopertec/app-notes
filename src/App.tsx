@@ -12,7 +12,7 @@ import 'react-toastify/dist/ReactToastify.css'
 import GitIcon from '/git.png'
 import LinkeIcon from '/linkedin.png'
 import { Text } from './Components/structure/Text'
-
+import { AutRoute } from './Components/AuthRoute'
 
 
 
@@ -22,7 +22,7 @@ const App=()=>{
         <Title fontFamilly='Roboto' color='#46872d'>AppNotes</Title>
       </Container>
 
-      <Container nameComponent='main'  bg='#77ea49a3'>
+      <Container nameComponent='main' mqw='100vw'   bg='#77ea49a3'>
           <BrowserRouter>
             <Routes>
               <Route path='' element={<LoginPage />} />

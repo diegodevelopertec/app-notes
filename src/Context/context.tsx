@@ -13,26 +13,46 @@ type Props={
 
 
 export const ContextProvider=({children}:Props)=>{
-    const [users,setUser]=useState<UserType | null>(null!)
+    const [user,setUser]=useState<UserType | null>(null!)
     const [notes,setNotes]=useState<NoteType[] | []>([])
-    const [token,setToken]=useState<String | null>(null)
+    const [token,setToken]=useState<string | null>(null)
     const [stateModal,setStateModal]=useState<boolean>(false)
 
+    useEffect(()=>{
+        let userStorage=JSON.parse(localStorage.getItem('u') as string)
+        let token=JSON.parse(localStorage.getItem('token') as string)
+        setUser(userStorage)
+        setToken(token)
+    },[])
 
     const  Login=(data:UserType)=>{
-    
+        if(data.email === user!.email && user?.password === data.password){
+            return true
+        }else{
+            toast.error('dados de login incorreto')
+        }
     
     
     
     }
    
     const Register=(data:UserType)=>{
-       
-        setUser(data)
-        localStorage.setItem('user',JSON.stringify(data))
-
+        let newUser=data
+        const token=uuid()
+        setToken(token)
+        console.log(user,token);
+        
+        localStorage.setItem('token',JSON.stringify(token))
+        localStorage.setItem('u',JSON.stringify(newUser))
+        
     }
 
+
+    const Logout=()=>{
+            setUser(null)
+            setToken(null)
+            localStorage.clear()
+    }
 
     const addNote=(data:NoteType)=>{
         setNotes([data,...notes])
@@ -55,7 +75,7 @@ export const ContextProvider=({children}:Props)=>{
 
 
 
-    return <ContextApp.Provider value={{notes,users,addNote,deleteNote,Login,Register,updateNote,stateModal,setStateModal}}>
+    return <ContextApp.Provider value={{notes,user,addNote,deleteNote,Login,Register,updateNote,stateModal,setStateModal,token,Logout}}>
        {children}
     </ContextApp.Provider>
 }

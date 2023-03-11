@@ -147,7 +147,7 @@ min-height: ${PropsStyle=>PropsStyle.minH};
 max-width: ${PropsStyle=>PropsStyle.maxH};
 max-height: ${PropsStyle=>PropsStyle.maxW};
 transition: ${PropsStyle=>PropsStyle.trs};
-
+resize: none;
 &:hover{
     border:  ${PropsStyle=>PropsStyle.bdHover};
     background-color:${PropsStyle=>PropsStyle.bgHover};

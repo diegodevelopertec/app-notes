@@ -48,10 +48,10 @@ export const CardNote=({data}:Props)=>{
 
 
 
-    return <Card fontFamilly="Roboto"  d="flex" mHover="12px" w="450px" flexDirection="column" mqm="12px 0" mqp="15px 12px"  m="15px 0" p="15px 12px" bg={'#01041f'} bdRadius='5px' > 
+    return <Card fontFamilly="Roboto"  mqw="90vw"  d="flex" mHover="12px" w="450px" flexDirection="column" mqm="12px 0"   m="15px 0" p="15px 12px" bg={'#01041f'} bdRadius='5px' > 
         
       
-      <Input bdRadius="3px" name='title' onChange={(e)=>setTitleNote(e.target.value)}  fontSize="15px" value={title} fontFamilly="Roboto" bd="none" color={disabled ? '#d6e1e5' : 'auto'} bg={disabled ? '#7297a3' : 'auto'} disabled={disabled} p="15px" m="12px 0"  type='text' />
+      <Input bdRadius="3px"  name='title' onChange={(e)=>setTitleNote(e.target.value)}  fontSize="15px" value={title} fontFamilly="Roboto" bd="none" color={disabled ? '#d6e1e5' : 'auto'} bg={disabled ? '#7297a3' : 'auto'} disabled={disabled} p="15px" m="12px 0"  type='text' />
         <TextArea bdRadius="3px" onChange={(e)=>setContentNote(e.target.value)}  value={content} name="content" fontSize="15px"  fontFamilly="Roboto" bd="none" color={disabled ? '#d5e4e9' : 'auto'}  bg={disabled ? '#7297a3' : 'auto'} disabled={disabled} p="5px" m="12px 0" resize="none" h="250px" >
             {content}
         </TextArea>
